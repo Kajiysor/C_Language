@@ -35,7 +35,7 @@ int main()
     }
 
     /* Pętla, która wymnaża po kolei wszystkie elementy tablic od końca i dodaje wynik do indeksu tablicy odpowiadającej za wynik
-       przykład: 625*25 ==> result[0] = 5*5, result[1] = 5*2, result[2] = 5*6 |NASTĘPUJE ZWIĘKSZENIE I A ZATEM ZWIĘKSZENIE INDEKSÓW| result[1] = result[1] + 2*5,
+       przykład: 625*25 ==> result[0] = 5*5, result[1] = 5*2, result[2] = 5*6 |NASTĘPUJE ZWIĘKSZENIE i A ZATEM ZWIĘKSZENIE INDEKSÓW| result[1] = result[1] + 2*5,
        result[2] = result[2] + 2*2, result[3] = 2*6  */
 
     for(i = 0;i < l2;i++)
