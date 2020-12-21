@@ -56,7 +56,7 @@ int main()
         result[i + 1] += tmp;
     }
 
-    /* Pętla przegląda tablice odpowiedzialną za wynik od końca, aż napotka liczbę, która jest większa od zaera, wtedy przekazuje indeks do kolejnej pętli */
+    /* Pętla przegląda tablice odpowiedzialną za wynik od końca, aż napotka liczbę, która jest większa od zera, wtedy przekazuje indeks do kolejnej pętli */
 
     for (i = l1 + l2; i >= 0; i--)
     {
