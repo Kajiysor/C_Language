@@ -19,7 +19,7 @@ int binary_conversion(unsigned n, char *bin)
     while (i >= 0)
     {
         /* Store LSB of num to bin */
-        bin[i] = n & 1;
+        bin[i] = n & 01;
 
         /* Decrement index */
         i--;
@@ -61,14 +61,14 @@ jump_point:
         binary_conversion(n, bin);
         printf("Ta liczba w postaci binarnej to: ");
         printf("%ls\n", &i);
-        for (i = 0; i < NMAX; i++)
-        {
-            printf("%d", bin[i]);
-        }
         for (j = 0; j <= NMAX; j++)
         {
             if (bin[j] > 0)
                 break;
+        }
+        for (i = j; i < NMAX; i++)
+        {
+            printf("%d", bin[i]);
         }
         amt = NMAX - j;
         printf("\nIlość bitów potrzebnych do zapisania tej liczby w systemie binarnym to: %d", amt);
