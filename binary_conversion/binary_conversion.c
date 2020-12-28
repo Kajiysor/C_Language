@@ -2,37 +2,37 @@
 #include <stdlib.h>
 #include <string.h>
 #define NMAX 32
-int non_binary_conversion(unsigned n, char *bin)
+int non_binary_conversion(unsigned dec, char *bin)
 {
     int i;
-    for (i = 0; n > 0; i++)
+    for (i = 0; dec > 0; i++)
     {
-        bin[i] = n % 2;
-        n = n / 2;
+        bin[i] = dec % 2;
+        dec = dec / 2;
     }
     return i;
 }
 
-int binary_conversion(unsigned n, char *bin)
+int binary_conversion(unsigned dec, char *bin)
 {
     int i = NMAX - 1;
     while (i >= 0)
     {
         /* Store LSB of num to bin */
-        bin[i] = n & 01;
+        bin[i] = dec & 01;
 
         /* Decrement index */
         i--;
 
         /* Right Shift num by 1 */
-        n >>= 1;
+        dec >>= 1;
     }
 }
 
 int main()
 {
     int i, answer, j;
-    unsigned n;
+    unsigned dec;
     char bin[NMAX];
     int amt = 0;
 jump_point:
@@ -44,8 +44,8 @@ jump_point:
     if (answer == 1)
     {
         printf("Wprowadź liczbę do przekonwertowania: \n");
-        scanf("%d", &n);
-        i = non_binary_conversion(n, bin);
+        scanf("%d", &dec);
+        i = non_binary_conversion(dec, bin);
         printf("Ta liczba w postaci binarnej to: ");
         for (i = i - 1; i >= 0; i--)
         {
@@ -56,9 +56,9 @@ jump_point:
     }
     else if (answer == 2)
     {
-        printf("Wprowadź liczbę do przekonwertowania: \n");
-        scanf("%d", &n);
-        binary_conversion(n, bin);
+        printf("Wprowadź liczbę do przekonwertowania: ");
+        scanf("%d", &dec);
+        binary_conversion(dec, bin);
         printf("Ta liczba w postaci binarnej to: ");
         printf("%ls\n", &i);
         for (j = 0; j <= NMAX; j++)
