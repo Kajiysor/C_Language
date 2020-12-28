@@ -23,10 +23,10 @@ int main(int argc, char *Argv[])
     /* Prosimy użytkownika o wprowadzenie hasła do szyfrowania i deszyfrowania */
 
     printf("Wpisz hasło: ");
+    scanf("%s", haslo);
 
     /* Otwieramy plik, na którym będziemy działać oraz plik tymczasowy, pomocniczy */
 
-    scanf("%s", haslo);
     if (NULL == (file1 = fopen(Argv[1], "rb")))
         return 1;
 
